@@ -3,87 +3,80 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Demo | โปรตัดต่อสายฟ้าFlash Shopping</title>
-  <meta name="description" content="Demo workflow สำหรับระบบ โปรตัดต่อสายฟ้าFlash Shopping จัดการวิดีโอสินค้าและโพสต์ลง TikTok">
-  <link rel="icon" type="image/png" href="https://github.com/napasin2231-bit/flashshopping/blob/main/icon.png?raw=true">
+  <title>TikTok Sandbox Demo | โปรตัดต่อสายฟ้าFlash Shopping</title>
+  <meta name="description" content="End-to-end TikTok Content Posting API sandbox workflow demo for Flash Shopping.">
+  <link rel="icon" type="image/png" href="icon.png">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html">
-      <img src="https://github.com/napasin2231-bit/flashshopping/blob/main/icon.png?raw=true" alt="Icon" style="width:36px; height:36px; border-radius:8px; object-fit:cover;">
-      <span>โปรตัดต่อสายฟ้าFlash Shopping</span>
-    </a>
-    <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms</a>
-    </nav>
+    <a class="brand" href="index.html"><img src="icon.png" alt="Flash Shopping" class="brand-icon"><span>โปรตัดต่อสายฟ้าFlash Shopping</span></a>
+    <nav><a href="index.html">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a></nav>
   </header>
 
-  <main>
-    <section class="page-hero">
-      <p class="eyebrow">Product demo</p>
-      <h1>ขั้นตอนการทำงานของ โปรตัดต่อสายฟ้าFlash Shopping</h1>
-      <p class="lead">หน้านี้อธิบายขั้นตอนกระบวนการทำงานตั้งแต่การนำเข้าสินค้า จนถึงการโพสต์วิดีโอไปยังโซเชียลมีเดีย</p>
+  <main class="review-demo">
+    <section class="page-hero compact-hero">
+      <p class="eyebrow">TikTok developer review</p>
+      <h1>Content Posting API — Sandbox Demo</h1>
+      <p class="lead">สาธิตขั้นตอนตั้งแต่เชื่อมบัญชี TikTok เลือกวิดีโอ ตรวจสอบข้อมูล และส่งคำขอโพสต์ โดยผู้ใช้เป็นผู้ยืนยันทุกครั้ง</p>
+      <div class="notice honest-notice"><strong>Review environment:</strong> หน้านี้เป็น Sandbox UI สำหรับบันทึกวิดีโอรีวิว การเรียก OAuth และ Content Posting API จริงต้องเชื่อมผ่าน backend ที่ตั้งค่า Redirect URI และ Client Secret แล้ว</div>
     </section>
 
-    <section class="timeline">
-      <article>
-        <span>Step 1</span>
-        <h2>Import product data</h2>
-        <p>นำเข้าข้อมูลสินค้า เช่น ชื่อสินค้า ราคา ลิงก์สินค้า และไฟล์รูปภาพสินค้าเข้าสู่ระบบ</p>
-      </article>
-      <article>
-        <span>Step 2</span>
-        <h2>Prepare media assets</h2>
-        <p>ระบบจัดระเบียบรูปภาพ นำเสนอตัวอย่าง และเตรียมไฟล์วิดีโอแนวตั้งสำหรับสินค้าแต่ละรายการ</p>
-      </article>
-      <article>
-        <span>Step 3</span>
-        <h2>Generate caption</h2>
-        <p>สร้างข้อความแคปชั่นสั้นๆ รวมราคา คำเชิญชวน และลิงก์สินค้าที่ผู้ใช้ระบุ</p>
-      </article>
-      <article>
-        <span>Step 4</span>
-        <h2>Connect TikTok account</h2>
-        <p>ผู้ใช้ทำการเชื่อมต่อบัญชี TikTok ผ่าน OAuth ปลอดภัย ไม่มีการจัดเก็บรหัสผ่าน TikTok</p>
-      </article>
-      <article>
-        <span>Step 5</span>
-        <h2>Review before publishing</h2>
-        <p>ผู้ใช้ตรวจสอบวิดีโอ แคปชั่น และบัญชีที่เลือกก่อนกดยืนยันการโพสต์</p>
-      </article>
-      <article>
-        <span>Step 6</span>
-        <h2>Track publishing results</h2>
-        <p>บันทึกประวัติการโพสต์ สถานะ เวลา และแพลตฟอร์ม เพื่อความสะดวกในการตรวจสอบ</p>
-      </article>
-    </section>
+    <section class="demo-shell" aria-label="TikTok publishing workflow">
+      <aside class="demo-steps">
+        <button class="step active" data-step="1"><span>1</span><b>Connect TikTok</b><small>OAuth authorization</small></button>
+        <button class="step" data-step="2"><span>2</span><b>Select video</b><small>MP4 or MOV</small></button>
+        <button class="step" data-step="3"><span>3</span><b>Post details</b><small>Caption & privacy</small></button>
+        <button class="step" data-step="4"><span>4</span><b>User review</b><small>Explicit confirmation</small></button>
+        <button class="step" data-step="5"><span>5</span><b>Publishing status</b><small>API result</small></button>
+      </aside>
 
-    <section class="section split">
-      <div>
-        <p class="eyebrow">Test account note</p>
-        <h2>หากระบบของคุณต้องการการเข้าสู่ระบบ</h2>
-        <p>ระบุบัญชีทดสอบสำหรับผู้ตรวจไว้ในช่อง Apply Reason บน TikTok Developer Portal เพื่อให้ทีมงานสามารถเข้าสู่ระบบ Dashboard เพื่อทดสอบเพิ่มเติมได้</p>
+      <div class="demo-stage">
+        <div class="demo-toolbar"><div><span class="status-dot"></span><strong>Sandbox Review Session</strong></div><span id="progressText">Step 1 of 5</span></div>
+
+        <section class="demo-screen active" data-screen="1">
+          <p class="eyebrow">Step 1</p><h2>Connect a TikTok account</h2>
+          <p class="screen-copy">ผู้ใช้กดปุ่มเพื่อไปยังหน้าอนุญาตของ TikTok และอนุมัติขอบเขตที่แอปขอใช้งาน</p>
+          <div class="scope-card"><strong>Requested product and scope</strong><div class="scope-row"><span>Content Posting API</span><code>video.publish</code></div><p>ใช้สำหรับโพสต์วิดีโอที่ผู้ใช้เลือกและยืนยันแล้วเท่านั้น</p></div>
+          <button class="tiktok-button" id="connectBtn">Connect with TikTok (Sandbox)</button>
+          <p class="microcopy">No TikTok password is collected or stored by this website.</p>
+        </section>
+
+        <section class="demo-screen" data-screen="2">
+          <p class="eyebrow">Step 2</p><h2>Select a video</h2>
+          <div class="connected-banner">✓ Connected to TikTok Sandbox account: @flashshopping_demo</div>
+          <label class="upload-box" id="uploadBox"><input id="videoInput" type="file" accept="video/mp4,video/quicktime"><span class="upload-icon">↑</span><strong>Choose MP4 or MOV</strong><small>Vertical video recommended · Maximum 50 MB for review upload</small></label>
+          <div class="selected-file hidden" id="selectedFile"><span>▶</span><div><strong id="fileName">flashshopping-demo.mp4</strong><small id="fileMeta">Demo asset selected</small></div><b>Ready</b></div>
+          <button class="button primary action-btn" id="useDemoBtn">Use prepared demo video</button>
+        </section>
+
+        <section class="demo-screen" data-screen="3">
+          <p class="eyebrow">Step 3</p><h2>Enter post details</h2>
+          <label class="form-label">Caption<textarea id="caption">โปรเด็ดประจำวันจาก Flash Shopping ✨ #FlashShopping #TikTokShop</textarea></label>
+          <label class="form-label">Privacy<select id="privacy"><option value="SELF_ONLY">Only me (SELF_ONLY) — Sandbox</option><option value="PUBLIC_TO_EVERYONE">Public (subject to app approval)</option></select></label>
+          <label class="consent-row"><input type="checkbox" id="consent"> ฉันยืนยันว่ามีสิทธิ์ใช้วิดีโอนี้และยอมรับการโพสต์ไปยังบัญชีที่เชื่อมต่อ</label>
+          <button class="button primary action-btn" id="detailsBtn">Continue to review</button>
+        </section>
+
+        <section class="demo-screen" data-screen="4">
+          <p class="eyebrow">Step 4</p><h2>Review before publishing</h2>
+          <div class="review-grid"><div class="video-preview"><div class="phone-video"><span>FLASH<br>SHOPPING</span><small>Prepared demo video</small></div></div><div class="review-data"><dl><dt>TikTok account</dt><dd>@flashshopping_demo</dd><dt>Video</dt><dd id="reviewFile">flashshopping-demo.mp4</dd><dt>Privacy</dt><dd id="reviewPrivacy">Only me (SELF_ONLY)</dd><dt>Scope used</dt><dd><code>video.publish</code></dd></dl><p id="reviewCaption">โปรเด็ดประจำวันจาก Flash Shopping ✨ #FlashShopping #TikTokShop</p></div></div>
+          <div class="notice"><strong>User control:</strong> ระบบจะไม่ส่งโพสต์จนกว่าผู้ใช้จะกดปุ่มยืนยันด้านล่าง</div>
+          <button class="tiktok-button" id="publishBtn">Confirm and send to TikTok Sandbox</button>
+        </section>
+
+        <section class="demo-screen" data-screen="5">
+          <p class="eyebrow">Step 5</p><h2>Publishing status</h2>
+          <div class="publish-progress" id="publishProgress"><div class="spinner"></div><strong>Sending publish request…</strong><small>Backend → TikTok Content Posting API</small></div>
+          <div class="result-card hidden" id="resultCard"><div class="result-icon">✓</div><h3>Sandbox workflow completed</h3><p>UI flow and request payload are ready for backend integration. No live TikTok post was created by this static demo.</p><dl><dt>Environment</dt><dd>Sandbox demonstration</dd><dt>Product</dt><dd>Content Posting API</dd><dt>Scope</dt><dd><code>video.publish</code></dd><dt>Status</dt><dd>Demo completed</dd></dl><button class="button secondary" id="restartBtn">Restart demo</button></div>
+        </section>
       </div>
-      <pre class="code-block">Test account:
-Email: reviewer@example.com
-Password: ReplaceWithSecurePassword
-
-Test flow:
-1. เข้าสู่ระบบ Dashboard
-2. เลือกรายการวิดีโอสินค้าที่เตรียมไว้
-3. ตรวจสอบแคปชั่นและบัญชี TikTok ที่เชื่อมต่อ
-4. กดยืนยันการโพสต์วิดีโอทดสอบไปยัง TikTok</pre>
     </section>
+
+    <section class="section integration-notes"><div><p class="eyebrow">Backend connection checklist</p><h2>สิ่งที่ต้องเชื่อมเพื่อโพสต์จริง</h2><p>GitHub Pages เป็น static hosting จึงควรให้ backend จัดการ OAuth callback, token และคำขอโพสต์ โดยไม่เปิดเผย Client Secret ใน JavaScript</p></div><ul class="check-list"><li>OAuth authorize URL และ Redirect URI ที่ลงทะเบียน</li><li>Backend แลก authorization code เป็น access token</li><li>เรียก Content Posting API ด้วย token ฝั่ง server</li><li>แสดงสถานะจริงจาก publish/status endpoint</li></ul></section>
   </main>
 
-  <footer>
-    <span>© 2026 โปรตัดต่อสายฟ้าFlash Shopping</span>
-    <a href="index.html">Home</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Service</a>
-  </footer>
+  <footer><span>© 2026 โปรตัดต่อสายฟ้าFlash Shopping</span><a href="index.html">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></footer>
+  <script src="assets/demo.js"></script>
 </body>
 </html>
