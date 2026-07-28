@@ -31,7 +31,7 @@
   });
   document.getElementById('useDemoBtn').addEventListener('click', () => { showFile('flashshopping-demo.mp4', 'Prepared sandbox demo asset · 9:16 vertical'); setTimeout(() => go(3), 400); });
   document.getElementById('detailsBtn').addEventListener('click', () => {
-    if (!document.getElementById('consent').checked) { alert('กรุณายืนยันสิทธิ์และการยินยอมก่อนดำเนินการต่อ'); return; }
+    if (!document.getElementById('consent').checked) { alert('Please confirm your rights and consent before continuing.'); return; }
     const caption = document.getElementById('caption').value.trim();
     const privacy = document.getElementById('privacy');
     document.getElementById('reviewCaption').textContent = caption || '(No caption)';

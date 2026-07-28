@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="th">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TikTok Sandbox Demo | โปรตัดต่อสายฟ้าFlash Shopping</title>
+  <title>TikTok Sandbox Demo | FlashShopping</title>
   <meta name="description" content="End-to-end TikTok Content Posting API sandbox workflow demo for Flash Shopping.">
   <link rel="icon" type="image/png" href="icon.png">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html"><img src="icon.png" alt="Flash Shopping" class="brand-icon"><span>โปรตัดต่อสายฟ้าFlash Shopping</span></a>
+    <a class="brand" href="index.html"><img src="icon.png" alt="Flash Shopping" class="brand-icon"><span>FlashShopping</span></a>
     <nav><a href="index.html">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a></nav>
   </header>
 
@@ -18,8 +18,8 @@
     <section class="page-hero compact-hero">
       <p class="eyebrow">TikTok developer review</p>
       <h1>Content Posting API — Sandbox Demo</h1>
-      <p class="lead">สาธิตขั้นตอนตั้งแต่เชื่อมบัญชี TikTok เลือกวิดีโอ ตรวจสอบข้อมูล และส่งคำขอโพสต์ โดยผู้ใช้เป็นผู้ยืนยันทุกครั้ง</p>
-      <div class="notice honest-notice"><strong>Review environment:</strong> หน้านี้เป็น Sandbox UI สำหรับบันทึกวิดีโอรีวิว การเรียก OAuth และ Content Posting API จริงต้องเชื่อมผ่าน backend ที่ตั้งค่า Redirect URI และ Client Secret แล้ว</div>
+      <p class="lead">An end-to-end demonstration of connecting a TikTok account, selecting a video, reviewing post details, and confirming a publishing request.</p>
+      <div class="notice honest-notice"><strong>Review environment:</strong> This page demonstrates the review workflow in a sandbox environment. Live OAuth and Content Posting API requests require a secure backend with a registered Redirect URI and Client Secret.</div>
     </section>
 
     <section class="demo-shell" aria-label="TikTok publishing workflow">
@@ -36,8 +36,8 @@
 
         <section class="demo-screen active" data-screen="1">
           <p class="eyebrow">Step 1</p><h2>Connect a TikTok account</h2>
-          <p class="screen-copy">ผู้ใช้กดปุ่มเพื่อไปยังหน้าอนุญาตของ TikTok และอนุมัติขอบเขตที่แอปขอใช้งาน</p>
-          <div class="scope-card"><strong>Requested product and scope</strong><div class="scope-row"><span>Content Posting API</span><code>video.publish</code></div><p>ใช้สำหรับโพสต์วิดีโอที่ผู้ใช้เลือกและยืนยันแล้วเท่านั้น</p></div>
+          <p class="screen-copy">The user continues to TikTok authorization and grants the requested permission.</p>
+          <div class="scope-card"><strong>Requested product and scope</strong><div class="scope-row"><span>Content Posting API</span><code>video.publish</code></div><p>Used only to publish a video explicitly selected and confirmed by the user.</p></div>
           <button class="tiktok-button" id="connectBtn">Connect with TikTok (Sandbox)</button>
           <p class="microcopy">No TikTok password is collected or stored by this website.</p>
         </section>
@@ -52,16 +52,16 @@
 
         <section class="demo-screen" data-screen="3">
           <p class="eyebrow">Step 3</p><h2>Enter post details</h2>
-          <label class="form-label">Caption<textarea id="caption">โปรเด็ดประจำวันจาก Flash Shopping ✨ #FlashShopping #TikTokShop</textarea></label>
+          <label class="form-label">Caption<textarea id="caption">Daily product highlights from FlashShopping ✨ #FlashShopping #TikTokShop</textarea></label>
           <label class="form-label">Privacy<select id="privacy"><option value="SELF_ONLY">Only me (SELF_ONLY) — Sandbox</option><option value="PUBLIC_TO_EVERYONE">Public (subject to app approval)</option></select></label>
-          <label class="consent-row"><input type="checkbox" id="consent"> ฉันยืนยันว่ามีสิทธิ์ใช้วิดีโอนี้และยอมรับการโพสต์ไปยังบัญชีที่เชื่อมต่อ</label>
+          <label class="consent-row"><input type="checkbox" id="consent"> I confirm that I have the right to use this video and authorize publishing to the connected account.</label>
           <button class="button primary action-btn" id="detailsBtn">Continue to review</button>
         </section>
 
         <section class="demo-screen" data-screen="4">
           <p class="eyebrow">Step 4</p><h2>Review before publishing</h2>
-          <div class="review-grid"><div class="video-preview"><div class="phone-video"><span>FLASH<br>SHOPPING</span><small>Prepared demo video</small></div></div><div class="review-data"><dl><dt>TikTok account</dt><dd>@flashshopping_demo</dd><dt>Video</dt><dd id="reviewFile">flashshopping-demo.mp4</dd><dt>Privacy</dt><dd id="reviewPrivacy">Only me (SELF_ONLY)</dd><dt>Scope used</dt><dd><code>video.publish</code></dd></dl><p id="reviewCaption">โปรเด็ดประจำวันจาก Flash Shopping ✨ #FlashShopping #TikTokShop</p></div></div>
-          <div class="notice"><strong>User control:</strong> ระบบจะไม่ส่งโพสต์จนกว่าผู้ใช้จะกดปุ่มยืนยันด้านล่าง</div>
+          <div class="review-grid"><div class="video-preview"><div class="phone-video"><span>FLASH<br>SHOPPING</span><small>Prepared demo video</small></div></div><div class="review-data"><dl><dt>TikTok account</dt><dd>@flashshopping_demo</dd><dt>Video</dt><dd id="reviewFile">flashshopping-demo.mp4</dd><dt>Privacy</dt><dd id="reviewPrivacy">Only me (SELF_ONLY)</dd><dt>Scope used</dt><dd><code>video.publish</code></dd></dl><p id="reviewCaption">Daily product highlights from FlashShopping ✨ #FlashShopping #TikTokShop</p></div></div>
+          <div class="notice"><strong>User control:</strong> The application will not submit the post until the user confirms below.</div>
           <button class="tiktok-button" id="publishBtn">Confirm and send to TikTok Sandbox</button>
         </section>
 
@@ -73,10 +73,10 @@
       </div>
     </section>
 
-    <section class="section integration-notes"><div><p class="eyebrow">Backend connection checklist</p><h2>สิ่งที่ต้องเชื่อมเพื่อโพสต์จริง</h2><p>GitHub Pages เป็น static hosting จึงควรให้ backend จัดการ OAuth callback, token และคำขอโพสต์ โดยไม่เปิดเผย Client Secret ใน JavaScript</p></div><ul class="check-list"><li>OAuth authorize URL และ Redirect URI ที่ลงทะเบียน</li><li>Backend แลก authorization code เป็น access token</li><li>เรียก Content Posting API ด้วย token ฝั่ง server</li><li>แสดงสถานะจริงจาก publish/status endpoint</li></ul></section>
+    <section class="section integration-notes"><div><p class="eyebrow">Backend connection checklist</p><h2>Requirements for live publishing</h2><p>GitHub Pages provides static hosting. A secure backend must handle the OAuth callback, tokens, and publishing requests without exposing the Client Secret in JavaScript.</p></div><ul class="check-list"><li>Registered OAuth authorization URL and Redirect URI</li><li>Backend exchanges the authorization code for an access token</li><li>Server-side Content Posting API request using the access token</li><li>Display the actual status returned by the publishing status endpoint</li></ul></section>
   </main>
 
-  <footer><span>© 2026 โปรตัดต่อสายฟ้าFlash Shopping</span><a href="index.html">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></footer>
+  <footer><span>© 2026 FlashShopping</span><a href="index.html">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></footer>
   <script src="assets/demo.js"></script>
 </body>
 </html>
